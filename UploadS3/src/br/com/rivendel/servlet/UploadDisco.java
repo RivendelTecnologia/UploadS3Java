@@ -41,7 +41,7 @@ public class UploadDisco extends HttpServlet {
 				} else {
 					// Process form file field (input type="file").
 					InputStream conteudoArquivo = item.getInputStream();
-					File arquivo = new File("arquivo-" + System.currentTimeMillis());
+					File arquivo = new File(item.getName() + System.currentTimeMillis());
 					FileOutputStream fos = new FileOutputStream(arquivo);
 					int read = 0;
 					byte[] bytes = new byte[1024];
